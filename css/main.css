@@ -413,7 +413,7 @@ main::after {
   display: none;
 }
 .filter input[type=checkbox]:checked + label > span.fake-chek::after {
-  content: url(/img/Group.svg);
+  content: url(../img/Group.svg);
 }
 
 table {
@@ -611,7 +611,7 @@ table input[type=checkbox]:checked + label + p {
   display: none;
 }
 .ideal .ideal__container .ideal__content input[type=checkbox]:checked + label > span.fake-chek::after {
-  content: url(/img/Group.svg);
+  content: url(../img/Group.svg);
 }
 .ideal .ideal__container .ideal__content label {
   margin-bottom: 0;
