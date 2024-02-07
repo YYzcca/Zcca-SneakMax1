@@ -1,0 +1,25 @@
+footer{
+    border-bottom: 1px rgba(255, 255, 255, 0.50) solid;
+    padding: 20px 0;
+    display: flex;
+    background: var(--gray);
+    .flex-box{
+        justify-content: space-between;
+        align-items: center;
+        nav{
+            a{
+                font-family: "Intro";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                color: #FFF;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            a + a {
+                margin-left: 40px;
+            }
+        }
+    }
+}

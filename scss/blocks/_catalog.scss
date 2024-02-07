@@ -1,0 +1,200 @@
+:root{
+    --img-hight: 293px;
+    --img-widh: 280px;
+}
+.catalog{
+    display: flex;
+    img{
+        transition: transform 0.2s ease-in;
+    }
+    .cross-card:hover > img {
+        transform: scale(1.02);
+    }
+    .cross-card:hover > img + .overlay{
+        transform: scale(1.02);
+        opacity: 0.4;
+        visibility: visible;
+    }
+    .cross-card:hover > img + .overlay + .check{
+        opacity: 1;
+        visibility: visible;
+    }
+    .cross-card:hover > img + .overlay + .check + .inCart{
+        opacity: 1;
+        visibility: visible;
+    }
+    .overlay{
+        transition: all .2s ease-in;
+        background: #FFF;
+        opacity: 0;
+        position: absolute;
+        height: 293px;
+        width: 280px;
+        border-radius: 4px;
+        top: 0;
+        visibility: hidden;
+    }
+    .check, .inCart{
+        transition: all .2s ease-in;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        top: calc(var(--img-hight)/2);
+        transform: translateY(-50%);
+        visibility: hidden;
+        opacity: 0;
+        svg{
+            position: absolute;
+            transition: opacity .2s ease-in;
+        }
+    }
+    .check{
+        left: 40px;
+    }
+    .inCart{
+        z-index: 1049;
+        right: 40px;
+    }
+    .check:hover > svg, .inCart:hover > svg{
+        opacity: 0.9;
+    }
+    .flex-box{
+        align-items: start;
+    }
+    h3{
+        margin-bottom: 40px;
+    }
+    .filter{
+        padding: 20px;
+        background: var(--small-bg);
+        border-radius: 4px;
+        margin-right: 20px;
+        h4{
+            font-size: 24px;
+            line-height: normal;
+            font-weight: 400;
+        }
+        p.title{
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: normal;
+            font-size: 16px;
+        }
+        .filter--price{
+            padding-top: 17px;
+            border: 1px solid #B2B5BB;
+            border-radius: 4px;
+            text-align: center;
+            width: 240px;
+            border-bottom: none;
+            input[type="number"]{
+                border: none;
+                background: var(--small-bg);
+                font-family: inherit;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                color: var(--text);
+                width: 49%;
+                text-align: center;
+                padding: 0 0;
+            }
+            input[type="number"] + input[type="number"] {
+                border-left: 1px solid #B2B5BB;
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                margin: 0;
+                -webkit-appearance: none;
+            }
+            input[type=number]:focus{
+                border: none;
+                outline: none;
+            }
+        }
+        button{
+            transition: background 0.2s ease-in;
+            width: 100%;
+            margin-top: 20px;
+            padding: 20px 0;
+            background: var(--gray);
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            color: #FFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #31343C;
+        }
+        button:active{
+            background: #26282e;
+        }
+        button:focus{
+            outline: none;
+        }
+        button + button{
+            background: transparent;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            color: var(--text);
+            text-align: center;
+            display: block;
+            padding: 0;
+            margin-top: 20px;
+        }
+        button + button:hover{
+            background: transparent;
+        }
+        button + button:active{
+            color: #26282e;
+            background: transparent;
+        }
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:20px;
+        button{
+            margin-left: auto;
+            margin-right: auto;
+            grid-column: 2;
+            grid-row: span 2;
+        }
+        .cross-card{
+            position: relative;
+            cursor: pointer;
+            width: 280px;
+            img{
+                height: var(--img-hight);
+                width: var(--img-widh);
+                border-radius: 4px;
+            }
+            h6{
+                font-family: "IntroBook";
+                font-size: 16px;
+                line-height: normal;
+                color: #444B58;
+                margin-top: 10px;
+            }
+            p#cost{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: normal;
+                color: var(--gray);
+            }
+        }
+        .hidden-cross-card{
+            display: none;
+        }
+    }
+}
+

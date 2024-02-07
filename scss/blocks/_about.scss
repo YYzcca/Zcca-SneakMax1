@@ -1,0 +1,75 @@
+.about{
+    background: var(--bg);
+    padding: 0;
+    color: #FFF;
+    overflow: hidden;
+    position: relative;
+    .circle-one{
+        width: 644px;
+        height: 644px;
+        transform: translate(-50%, -50%);
+    }
+    .circle-two{
+        position: absolute;
+        height: 297px;
+        width: 297px;
+        left: 253px;
+        transform: translateY(-60%);
+    }
+    .circle-two::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: var(--accent);
+        position: absolute;
+        bottom: 42px;
+        border-radius: 50%;
+        right: 29px;
+    }
+    h3{
+        font-weight: 700;
+        line-height: normal;
+        font-size: 30px;
+    }
+    p{
+        font-family: "IntroBook";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        max-width: 380px;
+        margin: 20px 0;
+    }
+    a{
+        transition: color 0.1s ease-in;
+        font-family: inherit;
+        color: #FFF;
+    }
+    a:hover{
+        color:#dbdbdb;
+    }
+    .line-logo{
+        font-weight: 700;
+        line-height: normal;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: -65px;
+    }
+    .line-logo::before{
+        content: '';
+        margin-right: 20px;
+        height: 3px;
+        background: #FFF;
+        width: 30px;
+        display: inline-block;
+    }
+    .container{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        img{
+            clip-path: polygon(0 100%, 25% 0, 80% 0, 100% 0%, 100% 80%, 100% 0%, 75% 100%);
+        }
+    }
+}
