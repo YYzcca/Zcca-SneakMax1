@@ -13,6 +13,7 @@ modalBg.forEach((e) => {
     e.addEventListener('click', () => {
         modal.classList.remove("modal-active");
         miniCart.classList.remove("miniCart-active");
+        formInst.classList.remove("form-active");
     })
 })
 
