@@ -126,6 +126,8 @@
     <section id="Hcatalog" class="catalog">
         <div class="container">
             <h3 class="section-h">Каталог</h3>
+            <p class="nonFilter">Ничего не найдено</p>
+            <button id="filBtn">Фильтры</button>
             <div class="flex-box">
                 <form class="filter">
                     <h4>Подбор <br> по параметрам</h4>
@@ -171,6 +173,7 @@
                     <button id="confirmBtn">Применить</button>
                     <button type="reset">сбросить</button>
                 </form>
+                <div class="modal-background"></div>
                 <div class="cards-container">
                     <div href="#" class="cross-card">
                         <img src="./img/image.jpg" alt="">
@@ -566,7 +569,7 @@
                         <input id="lInpt" type="text" placeholder="Ваше имя"><input id="lInpt" type="text" placeholder="E-mail">
                         <button id="fBtn" class="default-btn">Получить</button>
                     </form>
-                    <img src="./img/iPhone 11 Pro.png" alt="">
+                    <div id="phoneBtn"><img src="./img/iPhone 11 Pro.png" alt=""><button id="fBtn" class="default-btn">Получить</button></div>
                 </div>
             </div>
         </div>
@@ -697,7 +700,7 @@
     <!-- section -->
     <section class="inst">
         <div class="container flex-box">
-            <form action="">
+            <form id="formInst" action="">
                 <h3>Есть вопросы?</h3>
                 <p>Заполните форму и наш менеджер свяжется с вами</p>
                 <span>Это поле обязательно</span>
@@ -706,6 +709,7 @@
                 <input id="instInput" type="text" placeholder="Номер телефона">
                 <button id="iBtn" class="default-btn">Отправить</button>
             </form>
+            <div class="modal-background"></div>
             <div class="insta">
                 <a href="https://www.instagram.com/" class="inst-logo"><img src="./img/iLogo.png" alt="ops"></a>
                 <div class="is-container">
@@ -721,6 +725,7 @@
                 </div>
             </div>
         </div>
+        <button id="forFormBtn">Оставить заявку</button>
     </section>
     <!-- section -->
 
@@ -738,5 +743,6 @@
 <script src="./js/form.js"></script>
 <script src="./js/modal.js"></script>
 <script src="./js/cart.js"></script>
+<script src="./js/media.js"></script>
 </body>
 </html>
