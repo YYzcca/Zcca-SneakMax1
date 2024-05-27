@@ -207,8 +207,26 @@ resetBtn.addEventListener('click', () => {
 const conBtn = document.getElementById('confirmBtn');
 
 conBtn.addEventListener('click', (event) => {
+    setTimeout(hade, 100);
     event.preventDefault();
+    const filActive = document.querySelector('.filActive')
+    // console.log(filActive);
+    // filActive.classList.remove('filActive')
+    // filBtn.style.animation = "filResAnimation .8s 1 ease forwards";
 });
+
+function hade() {
+    const hdnCard = document.querySelectorAll('.hidden-cross-card')
+    let c = hdnCard.length;
+    console.log(c);
+    if (c == 12) {
+        document.querySelector('.nonFilter').classList.add('nonFilter-active')
+    } else {
+        document.querySelector('.nonFilter').classList.remove('nonFilter-active')
+    }
+}
+
+hade();
 
 const elCard = document.querySelectorAll('.cross-card');
 
@@ -258,3 +276,21 @@ function qweewq() {
 //         moreBtn.style.display = 'none';
 //     }
 // }
+
+
+const filBtn = document.getElementById('filBtn')
+const filters = document.querySelector('.filter')
+
+filBtn.addEventListener('click', () => {
+    filBtn.style.animation = "filAnimation .8s 1 ease forwards";
+    setTimeout(() => {
+        filters.classList.add('filActive')
+    }, 450);
+})
+
+filters.nextElementSibling.addEventListener('click', () => {
+    filters.classList.remove("filActive");
+    setTimeout(() => {
+        filBtn.style.animation = "filResAnimation .8s 1 ease forwards";
+    }, 450);
+})
