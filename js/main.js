@@ -144,23 +144,27 @@ StepBtn3.addEventListener('click', () => {
 
 
 const lInpts = document.querySelectorAll('#lInpt');
-const fBtn = document.querySelector('#fBtn');
+const fBtn = document.querySelectorAll('#fBtn');
 
-fBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    lInpts.forEach((e) => {
-        if (e.value == ''){
-            nextIndex = 3;
-            FtusF();
-            setTimeout(FtusL, 200);
-        } else {
-            nextIndex++;
-            ideal[parseInt(nextIndex)].classList.remove('ideal-hide');
-            ideal[parseInt(nextIndex) - 1].classList.add('ideal-hide');
-            setTimeout(Ires, 5000);
-        }
-    })
+fBtn.forEach((e) => {
+    e.addEventListener('click', (event) => {
+        event.preventDefault();
+        lInpts.forEach((e) => {
+            if (e.value == ''){
+                nextIndex = 3;
+                FtusF();
+                setTimeout(FtusL, 200);
+            } else {
+                nextIndex++;
+                ideal[parseInt(nextIndex)].classList.remove('ideal-hide');
+                ideal[parseInt(nextIndex) - 1].classList.add('ideal-hide');
+                setTimeout(Ires, 5000);
+            }
+        })
+    }) 
 })
+
+
 
 function Ires() {
     Icount = 0;
